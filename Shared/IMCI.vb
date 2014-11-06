@@ -179,9 +179,7 @@ Err_Handler:
 	End Function
 	
 	Public Function InitAVI(ByRef FileName As String, ByRef hWnd As Integer, ByRef Name As String, Optional ByRef Align As System.Windows.Forms.DockStyle = 0) As Boolean
-		'UPGRADE_NOTE: Left was upgraded to Left_Renamed. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="A9E4979A-37FA-4718-9994-97DD76ED70A7"'
-		Dim Left_Renamed As String
-		Dim sParse As New VB6.FixedLengthString(128)
+		Dim sParse As String
 		Dim lPos As Integer
 		Dim lStart As Integer
 		Dim sCmd As String
@@ -197,21 +195,21 @@ Err_Handler:
 		m_IsOpen = True
 		m_DeviceType = DEVICETYPE.vsVideo
 		' [borf] check to see if the video was decodeable
-		m_Error = mciSendString("Status " & m_Alias & " video", sParse.Value, Len(sParse.Value) - 1, 0)
+        m_Error = mciSendString("Status " & m_Alias & " video", sParse, Len(sParse) - 1, 0)
 		If m_Error Then GoTo Err_Handler
-		If Left_Renamed(sParse.Value, 3) = "off" Then
-			m_Error = MCIERR_VIDEO_NOCODEX
-			GoTo Err_Handler
-		End If
+        If Left(sParse, 3) = "off" Then
+            m_Error = MCIERR_VIDEO_NOCODEX
+            GoTo Err_Handler
+        End If
 		' Get Width & Height of the Video
-		sParse.Value = Space(128)
-		m_Error = mciSendString("Where " & m_Alias & " Destination", sParse.Value, Len(sParse.Value) - 1, 0)
+        sParse = Space(128)
+        m_Error = mciSendString("Where " & m_Alias & " Destination", sParse, Len(sParse) - 1, 0)
 		If m_Error Then GoTo Err_Handler
-		lStart = InStr(1, sParse.Value, " ") 'pos of top
-		lPos = InStr(lStart + 1, sParse.Value, " ") 'pos of left
-		lStart = InStr(lPos + 1, sParse.Value, " ") 'pos width
-		m_Width = CInt(Mid(sParse.Value, lPos, lStart - lPos))
-		m_Height = CInt(Mid(sParse.Value, lStart + 1))
+        lStart = InStr(1, sParse, " ") 'pos of top
+        lPos = InStr(lStart + 1, sParse, " ") 'pos of left
+        lStart = InStr(lPos + 1, sParse, " ") 'pos width
+        m_Width = CInt(Mid(sParse, lPos, lStart - lPos))
+        m_Height = CInt(Mid(sParse, lStart + 1))
 		If m_Error Then GoTo Err_Handler
 		Exit Function
 Err_Handler: 

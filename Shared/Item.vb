@@ -181,7 +181,7 @@ Friend Class Item
 					End If
 				Next 
 				myName = Left(myName, i)
-				Name = VB6.Format(myCount) & " " & Trim(myName) & "s"
+                Name = Format(myCount) & " " & Trim(myName) & "s"
 				If intCopyNumber > 0 Then
 					myName = myName & Str(intCopyNumber)
 					Name = Name & Str(intCopyNumber)

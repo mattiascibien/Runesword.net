@@ -43,13 +43,13 @@ Module modIOFunc
 		' 3- from the default RS music
 		' tome music
 		'UPGRADE_WARNING: Couldn't resolve default property of object Tome.FullPath. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
-		FileName = Tome.FullPath & "\" & SongName
+        FileName = modBD.Tome.FullPath & "\" & SongName
 		If oFileSys.CheckExists(FileName, clsInOut.IOActionType.File) Then GoTo PlaySong
 		'UPGRADE_WARNING: Couldn't resolve default property of object Tome.FullPath. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
-		FileName = Tome.FullPath & "\Combat\" & SongName
+        FileName = modBD.Tome.FullPath & "\Combat\" & SongName
 		If oFileSys.CheckExists(FileName, clsInOut.IOActionType.File) Then GoTo PlaySong
 		'UPGRADE_WARNING: Couldn't resolve default property of object Tome.FullPath. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
-		FileName = Tome.FullPath & "\Adventure\" & SongName
+        FileName = modBD.Tome.FullPath & "\Adventure\" & SongName
 		If oFileSys.CheckExists(FileName, clsInOut.IOActionType.File) Then GoTo PlaySong
 		'UPGRADE_NOTE: IsMissing() was changed to IsNothing(). Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="8AE1CB93-37AB-439A-A4FF-BE3B6760BB23"'
 		If Not IsNothing(AlternatePath) Then
@@ -170,7 +170,7 @@ Err_Handler:
 			' 2- from the world dedicated music folder
 			' 3- from the default RS music
 			'UPGRADE_WARNING: Couldn't resolve default property of object Tome.LoadPath. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
-			sPath = Tome.LoadPath & "\" & IIf(Style, "Combat", "Adventure")
+            sPath = modBD.Tome.LoadPath & "\" & IIf(Style, "Combat", "Adventure")
 			If Not oFileSys.CheckExists(sPath, clsInOut.IOActionType.Folder) Then sPath = WorldNow.MusicFolder & "\" & IIf(Style, "Combat", "Adventure")
 			' default music
 			'        If Not oFileSys.CheckExists(sPath, Folder) Then sPath = gAppPath & "\data\music\" & IIf(Style, "Combat", "Adventure")
@@ -239,7 +239,7 @@ Err_Handler:
 			End Select
 			If sSound <> vbNullString Then
 				'            Call PlaySoundFile(gAppPath & "\data\interface\" & GlobalInterfaceName & "\" & sSound, Tome, True)
-				Call PlaySoundFile(gDataPath & "\interface\" & GlobalInterfaceName & "\" & sSound, Tome, True)
+                Call PlaySoundFile(gDataPath & "\interface\" & GlobalInterfaceName & "\" & sSound, modBD.Tome, True)
 			End If
 		Else
 			Select Case ClickType
@@ -250,7 +250,7 @@ Err_Handler:
 			End Select
 			If sSound <> vbNullString Then
 				'            Call PlaySoundFile(gAppPath & "\data\stock\" & sSound, Tome, True, 5, &H10)
-				Call PlaySoundFile(gDataPath & "\stock\" & sSound, Tome, True, 5, &H10)
+                Call PlaySoundFile(gDataPath & "\stock\" & sSound, modBD.Tome, True, 5, &H10)
 			End If
 		End If
 	End Sub

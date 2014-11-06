@@ -96,7 +96,7 @@ Err_Handler:
 		Dim ErrOut As ErrorOutput
 		Dim timestamp As String
 		Dim intErrNumber As Short
-		timestamp = VB6.Format(Now, "yyyy mm dd hh:mm:ss")
+        timestamp = Now.ToString("yyyy MM dd hh:mm:ss")
 		'On Error GoTo Err_Handler
 		'Comments = "[" & timestamp & "] " & Comments '& vbCrLf
 		sMsg = "[" & timestamp & "] " & vbCrLf & vbTab & "Source:" & Err.Source & vbCrLf & vbTab & "Description:" & Err.Description & "  (" & Err.Number & ")"

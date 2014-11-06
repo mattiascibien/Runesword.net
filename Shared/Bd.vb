@@ -805,7 +805,7 @@ Module modBD
                 List(2, 2) = "Slow"
                 ListIndex(2) = 2
                 For c = 0 To 64
-                    List(3, c) = VB6.Format(c, "00")
+                    List(3, c) = Format(c, "00")
                 Next c
                 ListIndex(3) = 64
             Case 47 'Sorcery [Context.Var]
@@ -1011,12 +1011,12 @@ Module modBD
                 List(0, 4) = "CreatureTarget"
                 ListIndex(0) = 4
                 For c = 2 To 32
-                    List(1, c - 2) = VB6.Format(c, "00")
+                    List(1, c - 2) = Format(c, "##")
                 Next c
                 ListIndex(1) = 30
             Case 73 'MapAnimation 'Text' Frames [List] Level [List] At (Context.Var, Context.Var)
                 For c = 2 To 32
-                    List(0, c - 2) = VB6.Format(c, "00")
+                    List(0, c - 2) = Format(c, "##")
                 Next c
                 ListIndex(0) = 30
                 List(1, 0) = "Bottom"
@@ -1768,7 +1768,7 @@ Module modBD
 				End Select
 			Case 29, 30 ' Positive and Negative Numbers
 				If Var > -1 And Var < 256 Then
-					VarToText = VB6.Format(Var)
+                    VarToText = Format(Var)
 				End If
 			Case 31 ' Dice
 				If Var > -1 And Var < 256 Then
@@ -1779,7 +1779,7 @@ Module modBD
 				End If
 			Case 32 ' Random number
 				If Var > -1 And Var < 256 Then
-					VarToText = Trim(VB6.Format(Var + 1))
+                    VarToText = Trim(Format(Var + 1))
 				End If
 		End Select
 	End Function

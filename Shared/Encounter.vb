@@ -538,7 +538,7 @@ Friend Class Encounter
 		If Len(myWallpaper) > 0 Then
 			tmp = myWallpaper & "|"
 			For X = 0 To bdCombatWidth : For Y = 0 To bdCombatHeight
-					tmp = tmp & VB6.Format(myCombatGrid(X, Y))
+                    tmp = tmp & Format(myCombatGrid(X, Y))
 				Next Y : Next X
 			'UPGRADE_WARNING: Put was upgraded to FilePut and has a new behavior. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="9B7D5ADD-D8FE-4819-A36C-6DEDAF088CC7"'
 			FilePut(ToFile, Len(tmp))

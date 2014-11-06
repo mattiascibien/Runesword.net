@@ -1749,11 +1749,14 @@ Friend Class Creature
 		End Set
 	End Property
 	
-	Public ReadOnly Property Infos() As clsInfos
-		Get
-			Infos = myInfos
-		End Get
-	End Property
+    Public Property Infos() As clsInfos
+        Get
+            Infos = myInfos
+        End Get
+        Set(value As clsInfos)
+            Infos = value
+        End Set
+    End Property
 	
 	Public Sub AddStep(ByRef NewX As Short, ByRef NewY As Short)
 		Dim c As Short
