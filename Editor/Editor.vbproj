@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <MyType>WindowsForms</MyType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CF9024C4-2E2D-4C09-AB5C-BF8F0A68283C}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>rsCreator</AssemblyName>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>rsCreator.frmMDI</StartupObject>
+    <AssemblyMajorVersion>2</AssemblyMajorVersion>
+    <AssemblyMinorVersion>6</AssemblyMinorVersion>
+    <AssemblyRevisionNumber>23</AssemblyRevisionNumber>
+    <GenerateRevisionNumber>True</GenerateRevisionNumber>
+    <AssemblyCompanyName>CrossCut Games, Inc.</AssemblyCompanyName>
+    <StartWithIE>False</StartWithIE>
+    <ApplicationIcon>rsCreator.ico</ApplicationIcon>
+    <RootNamespace>rsCreator</RootNamespace>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>.\bin\</OutputPath>
+    <DocumentationFile>rsCreator.xml</DocumentationFile>
+    <DebugSymbols>True</DebugSymbols>
+    <DefineDebug>True</DefineDebug>
+    <DefineTrace>True</DefineTrace>
+    <DefineConstants>Win32=True</DefineConstants>
+    <PlatformTarget>x86</PlatformTarget>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>.\bin\</OutputPath>
+    <DocumentationFile>rsCreator.xml</DocumentationFile>
+    <DebugSymbols>False</DebugSymbols>
+    <DefineDebug>False</DefineDebug>
+    <DefineTrace>True</DefineTrace>
+    <DefineConstants>Win32=True</DefineConstants>
+    <PlatformTarget>x86</PlatformTarget>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic.Compatibility">
+      <Name>Microsoft.VisualBasic.Compatibility</Name>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.XML">
+      <Name>System.XML</Name>
+    </Reference>
+    <COMReference Include="AxComctlLib">
+      <Guid>{6B7E6392-850A-101B-AFC0-4210102A8DA7}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+    <COMReference Include="ComctlLib">
+      <Guid>{6B7E6392-850A-101B-AFC0-4210102A8DA7}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="Microsoft.VisualBasic.Compatibility" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Am_About.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>Am_About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Am_About.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Am_area.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>Am_area.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Am_area.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Am_ConvoProp.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>Am_ConvoProp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Am_ConvoProp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Am_EncProp.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>Am_EncProp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Am_EncProp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AM_EntryPoint.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>AM_EntryPoint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AM_EntryPoint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Am_Factoid.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>Am_Factoid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Am_Factoid.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Am_item.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>Am_item.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Am_item.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Am_Journal.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>Am_Journal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Am_Journal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Am_List.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>Am_List.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Am_List.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Am_MapProp.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>Am_MapProp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Am_MapProp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Am_mdi.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>Am_mdi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Am_mdi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Am_MonsProp.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>Am_MonsProp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Am_MonsProp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Am_Project.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>Am_Project.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Am_Project.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Am_Search.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>Am_Search.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Am_Search.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Am_ThemeProp.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>Am_ThemeProp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Am_ThemeProp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Am_TileMap.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>Am_TileMap.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Am_TileMap.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Am_TileSetProp.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>Am_TileSetProp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Am_TileSetProp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Am_TomeProp.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>Am_TomeProp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Am_TomeProp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Am_TopicProp.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>Am_TopicProp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Am_TopicProp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.vb" />
+    <Compile Include="Dm.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EntrySketch.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="frmErrorDialog.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmErrorDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmErrorDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmItemExplorer.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmItemExplorer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmItemExplorer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMonsExplorer.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmMonsExplorer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMonsExplorer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTriggerProp.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmTriggerProp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTriggerProp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWorldSettings.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>frmWorldSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmWorldSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LineShapeArray.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="modCreatorGeneral.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="modHelp.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OvalShapeArray.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Uber Wizard.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>Uber Wizard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Uber Wizard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="Am_About.resX">
+      <DependentUpon>Am_About.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Am_area.resX">
+      <DependentUpon>Am_area.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Am_ConvoProp.resX">
+      <DependentUpon>Am_ConvoProp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Am_EncProp.resX">
+      <DependentUpon>Am_EncProp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AM_EntryPoint.resX">
+      <DependentUpon>AM_EntryPoint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Am_Factoid.resX">
+      <DependentUpon>Am_Factoid.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Am_item.resX">
+      <DependentUpon>Am_item.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Am_Journal.resX">
+      <DependentUpon>Am_Journal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Am_List.resX">
+      <DependentUpon>Am_List.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Am_MapProp.resX">
+      <DependentUpon>Am_MapProp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Am_mdi.resX">
+      <DependentUpon>Am_mdi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Am_MonsProp.resX">
+      <DependentUpon>Am_MonsProp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Am_Project.resX">
+      <DependentUpon>Am_Project.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Am_Search.resX">
+      <DependentUpon>Am_Search.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Am_ThemeProp.resX">
+      <DependentUpon>Am_ThemeProp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Am_TileMap.resX">
+      <DependentUpon>Am_TileMap.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Am_TileSetProp.resX">
+      <DependentUpon>Am_TileSetProp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Am_TomeProp.resX">
+      <DependentUpon>Am_TomeProp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Am_TopicProp.resX">
+      <DependentUpon>Am_TopicProp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmErrorDialog.resX">
+      <DependentUpon>frmErrorDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmItemExplorer.resX">
+      <DependentUpon>frmItemExplorer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMonsExplorer.resX">
+      <DependentUpon>frmMonsExplorer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTriggerProp.resX">
+      <DependentUpon>frmTriggerProp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWorldSettings.resX">
+      <DependentUpon>frmWorldSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uber Wizard.resX">
+      <DependentUpon>Uber Wizard.vb</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="rsCreator.ico" />
+    <None Include="_UpgradeReport.htm">
+      <SubType>Preview</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
